@@ -1,7 +1,7 @@
 TerPAApp::Application.routes.draw do
   resources :microposts
-
-
+  get "smartmodels/new"
+  post "smartmodels/create"
   resources :users
 
 

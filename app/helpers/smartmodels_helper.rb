@@ -1,0 +1,2 @@
+module SmartmodelsHelper
+end
