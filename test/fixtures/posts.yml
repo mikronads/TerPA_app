@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  text: MyText
+  timesend: 2013-05-20
+
+two:
+  title: MyString
+  text: MyText
+  timesend: 2013-05-20

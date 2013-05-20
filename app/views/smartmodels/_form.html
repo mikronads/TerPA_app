@@ -1,0 +1,31 @@
+<%= form_for @smartmodel do |f| %>
+  <% if @smartmodel.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@smartmodel.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @smartmodel.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+   <% end %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+  
+  <p>
+    <%= f.label :date %><br>
+	<%= f.date_select :timesend %><br>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

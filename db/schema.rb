@@ -11,11 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517090239) do
+ActiveRecord::Schema.define(:version => 20130520080710) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.date     "timesend"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "smartmodels", :force => true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.date     "timesend"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

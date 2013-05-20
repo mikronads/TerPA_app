@@ -1,0 +1,23 @@
+<h1>Listing models</h1>
+<%= link_to 'New post', :action => :new %> 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Date</th>	
+	<th></th>
+	<th></th>
+	<th></th>
+  </tr>
+ 
+  <% @smartmodels.each do |smartmodel| %>
+    <tr>
+      <td><%= smartmodel.title %></td>
+      <td><%= smartmodel.text %></td>
+	  <td><%= smartmodel.timesend %></td>
+	  <td><%= link_to 'Show', :action => :show, :id => smartmodel.id %></td>
+	  <td><%= link_to 'Edit', :action => :edit, :id => smartmodel.id %></td>
+	  <td><%= link_to 'Destroy', { :action => :destroy, :id => smartmodel.id }, :method => :delete, :confirm => 'Are you sure?' %></td>
+    </tr>
+  <% end %>
+</table>
